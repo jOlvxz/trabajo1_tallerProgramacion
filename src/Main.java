@@ -2,16 +2,33 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Intro with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        try {
+            EmpleadoIndefinido empleadoPlanta = new EmpleadoIndefinido("jean", "olivares", 300000, 12);
+            System.out.println("OBJETO CLASE EMPLEADO INDEFINIDO");
+            empleadoPlanta.informacion();
+            System.out.println("---");
+            empleadoPlanta.pagarFiniquito();
+            System.out.println("---");
+            empleadoPlanta.darVacaciones();
+            System.out.println("*-------------------------*");
 
-        // Press Mayús+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+            EmpleadoTemporal empleadoTemporada = new EmpleadoTemporal("elpi", "chula" , 300000, 4);
+            System.out.println("OBJETO CLASE EMPLEADO TEMPORAL");
+            empleadoTemporada.informacion();
+            System.out.println("---");
+            empleadoTemporada.pagarFiniquito();
+            System.out.println("---");
+            empleadoTemporada.extenderContrato(4);
+            System.out.println("---");
+            empleadoTemporada.darVacaciones();
+            System.out.println("---");
+            empleadoTemporada.informacion();
 
-            // Press Mayús+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        } catch (Error e){
+            System.out.println("ups ! ");
         }
+
+
+
     }
 }
